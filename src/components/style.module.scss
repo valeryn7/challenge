@@ -1,0 +1,55 @@
+@import "./style.scss";
+
+.sidebar {
+    position: absolute;
+    display: flex;
+    width: 14rem;
+    height: 100%;
+    background-color: $background-color-sidebar;
+    border-radius: 0.25rem;
+    flex-direction: column;
+    overflow: hidden;
+  
+    .content {
+      position: relative;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .title{
+      position: relative;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      font-size: larger;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+    }
+   
+    .button {
+      position: relative;
+      text-decoration: none;
+      color:$principal-font;
+      width: 100%;
+      border-radius: 0.25rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 0.1rem;
+    }
+  
+    .button:hover {
+      background-color: $background-color-button-hover;
+      color: $secondary-font;
+      transition: background-color 0.3s;
+    }
+
+    .buttonActive {
+        @extend .button;
+        background-color: $background-color-button;
+        color: $secondary-font;
+    }
+  }
+  
