@@ -1,0 +1,12 @@
+# Ignorar directorios
+node_modules/
+build/
+dist/
+
+# Ignorar archivos específicos
+.eslintrc.js
+README.md
+
+# Ignorar archivos con extensiones específicas
+*.log
+*.json

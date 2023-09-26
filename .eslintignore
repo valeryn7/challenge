@@ -1,0 +1,9 @@
+# Ignorar archivos generados por Node.js y npm
+node_modules/
+
+# Ignorar archivos de compilación o build
+build/
+dist/
+
+# Ignorar archivos de configuración
+.eslintrc.js
