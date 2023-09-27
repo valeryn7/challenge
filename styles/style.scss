@@ -1,11 +1,38 @@
 @import "./variables.scss";
 
-.h1{
-    color:$principal-font;
-}
-
 .body {
-    font-family: "Plat", sans-serif;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
     margin: 0;
 }
-  
+
+.alignEnd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.alignCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondaryButton{
+    background-color: $background-color-secondary-button !important;
+    border-color: $background-color-secondary-button!important;
+    color:white !important;
+}
+
+.primaryButton{
+    background-color: $background-color-primary-button !important;
+    border-color: $background-color-primary-button !important; 
+    color:white !important;
+}
+
+.title{
+    font-size: large;
+    padding-bottom: 1.2rem;
+    padding-top: 1.5rem;
+}

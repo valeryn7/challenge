@@ -1,0 +1,98 @@
+@import "./style.scss";
+
+.sidebar {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 0rem;
+    background-color: $background-color-sidebar;
+    flex-direction: column;
+    overflow: hidden;
+    transition: width 0.3s;
+
+    &.show{
+        width:15rem;
+    }
+
+    &.hidden{
+        width: 0rem;
+    }
+
+    .content {
+      position: relative;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+   
+    .button {
+      position: relative;
+      text-decoration: none;
+      color:$principal-font;
+      width: 100%;
+      border-radius: 0.25rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 0.1rem;
+    }
+  
+    .button:hover {
+      background-color: $background-color-button-hover;
+      color: $secondary-font;
+      transition: background-color 0.3s;
+    }
+
+    .buttonActive {
+        @extend .button;
+        background-color: $background-color-button;
+        color: $secondary-font;
+    }
+}
+
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+
+    .title{
+        position: relative;
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    .buttonSidebar{
+        border-radius: 50%;
+        background-color: transparent;
+        border-color: transparent;
+        color:black;
+        cursor: pointer;
+    }
+
+    .buttonSidebar:hover{
+        @extend .buttonSidebar;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: $background-color-secondary-button;
+        border-radius: 50%;
+    }
+}
+
+.children{
+    background-color: $background-color;
+    transition: margin-left 0.3s;
+
+    &.childrenShow{
+        margin-left: 15rem;
+    }
+
+    &.childrenHidden{
+        margin-left: 0rem;
+        background-color: $background-color;
+    }
+}
