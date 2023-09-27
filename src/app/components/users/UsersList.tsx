@@ -9,11 +9,9 @@ import ModalUser from "./ModalUser";
 import HeaderUsers from "./HeaderUsers";
 import UserListLoading from "./UserListLoading";
 
-interface UsersListProps {
-  users: User[];
-}
+import apiEndpoints from "../../../../config";
 
-export default function UsersList({users = []}: UsersListProps) {
+export default function UsersList() {
   const [usersList, setUsersList] = useState<User[]>([]);
   const [openUsers, setOpenUsers] = useState<number[]>([]);
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -21,9 +19,13 @@ export default function UsersList({users = []}: UsersListProps) {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    setUsersList(users);
-    setLoading(false);
-  }, [users]);
+    fetch(apiEndpoints.user).then(res =>
+      res.json().then(users => {
+        setUsersList(users);
+        setLoading(false);
+      }),
+    );
+  }, []);
 
   const toggleUser = (id: number) => {
     if (openUsers.includes(id)) {
