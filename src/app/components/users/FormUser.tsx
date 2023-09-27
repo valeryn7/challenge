@@ -114,14 +114,12 @@ export default function FormUser({
         ) : (
           <div className={styles.alignCenter}>
             <div className={styles.avatarContainerEdit}>
-              <div className={styles.avatarEdit}>
-                <img
-                  className={styles.avatarImgCover}
-                  src={userForm.avatar}
-                  alt="Avatar"
-                  onClick={handleAvatarClick}
-                />
-              </div>
+              <img
+                className={styles.avatarEdit}
+                src={userForm.avatar}
+                alt="Avatar"
+                onClick={handleAvatarClick}
+              />
             </div>
           </div>
         )}
